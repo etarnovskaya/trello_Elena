@@ -28,6 +28,7 @@ public class BoardHelper extends  HelperBase{
 
   public void confirmBoardCreation() throws InterruptedException {
 
+
     click(By.cssSelector("[data-test-id='header-create-board-submit-button']"));
     //waitForElementAndClick(By.cssSelector("[data-test-id='header-create-board-submit-button']"), 20);
   }
@@ -80,9 +81,10 @@ public class BoardHelper extends  HelperBase{
 
   public void createBoard() throws InterruptedException {
     clickOnPlusButtonOnHeader();
+
    selectCreateBoardFromDropDown();
    fillBoardCreationForm(new BoardData().setBoardName("qa21"));
-    confirmBoardCreation();
+   confirmBoardCreation();
     returnToHomePage();
   }
 
@@ -105,6 +107,4 @@ public class BoardHelper extends  HelperBase{
     return driver.findElement(By.xpath("//*[@class='icon-lg icon-member']/../../..//li")).getText().equals(name);
 
   }
-
-
 }

@@ -1,6 +1,7 @@
 package com.trello.qa.model;
 
 public class BoardData {
+
   private  String boardName;
   private  String s;
 

@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
 
 import java.io.*;
 import java.util.ArrayList;
+
 import java.util.Collections;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -36,12 +38,12 @@ public class TeamCreationTests extends TestBase {
       String[] split = line.split(",");
       list.add(new Object[] {
               new TeamData()
+
               .withTeamName(split[0])
               .withDescription(split[1])});
 
       line = reader.readLine();
     }
-
     return  list.iterator();
   }
 
@@ -49,39 +51,34 @@ public class TeamCreationTests extends TestBase {
   @BeforeMethod
   public void ensurePreconditionsLogin() {
     if (!app.getSessionHelper().isUserLoggedIn()) {
-      app.getSessionHelper().login("elena.telran@yahoo.com", "12345.com");
+      app.getSessionHelper().login("shcherbakov-d@mail.com", "wdw77wdw");
     }
   }
-//  @Test(dataProvider = "validTeams")
-//  public void testTeamCreationFromPlusButtonOnHeaderWithDataProviderFromcsv
-//          (TeamData team) {
-//    TeamData team =
-//            new TeamData().withTeamName(teamName).withDescription(description);
-//    int before = app.getTeamHelper().getTeamsCount();
-//    app.getTeamHelper().clickOnPlusButtonOnHeader();
-//    app.getTeamHelper().selectCreateTeamFromDropDown();
-//
-//    app.getTeamHelper().fillTeamCreationForm(team);
-//
-//    app.getTeamHelper().clickContinueButton();
-//    //  String createdTeamName = getTeamNameFromTeamPage();
-//    app.getTeamHelper().returnToHomePage();
-//    int after = app.getTeamHelper().getTeamsCount();
-//    Assert.assertEquals(after, before + 1);
-//    //  Assert.assertEquals(createdTeamName.toLowerCase(), teamName.toLowerCase());
-//  }
+  @Test(dataProvider = "validTeamsfromcsv")
+  public void testTeamCreationFromPlusButtonOnHeaderWithDataProviderFromcsv(TeamData team) throws InterruptedException {
+
+    int before = app.getTeamHelper().getTeamsCount();
+    app.getTeamHelper().clickOnPlusButtonOnHeader();
+    app.getTeamHelper().selectCreateTeamFromDropDown();
+    app.getTeamHelper().fillTeamCreationForm(team);
+    app.getTeamHelper().clickContinueButton();
+    app.getTeamHelper().returnToHomePage();
+    int after = app.getTeamHelper().getTeamsCount();
+    Assert.assertEquals(after, before + 1);
+  //Assert.assertEquals(createdTeamName.toLowerCase(), teamName.toLowerCase());
+  }
 
   @Test(dataProvider = "validTeams")
   public void testTeamCreationFromPlusButtonOnHeaderWithDataProvider
+
           (String teamName, String description) throws InterruptedException {
+
     TeamData team =
             new TeamData().withTeamName(teamName).withDescription(description);
     int before = app.getTeamHelper().getTeamsCount();
     app.getTeamHelper().clickOnPlusButtonOnHeader();
     app.getTeamHelper().selectCreateTeamFromDropDown();
-
     app.getTeamHelper().fillTeamCreationForm(team);
-
     app.getTeamHelper().clickContinueButton();
     //  String createdTeamName = getTeamNameFromTeamPage();
     app.getTeamHelper().returnToHomePage();
@@ -96,6 +93,7 @@ public class TeamCreationTests extends TestBase {
     app.getTeamHelper().clickOnPlusButtonOnHeader();
     app.getTeamHelper().selectCreateTeamFromDropDown();
     String teamName = "qa21-" + System.currentTimeMillis();
+
     TeamData team = new TeamData()
             .withTeamName(teamName)
             .withDescription("descr qa 21");
@@ -117,7 +115,9 @@ public class TeamCreationTests extends TestBase {
     app.getTeamHelper().clickOnPlusButtonOnLeftNavMenu();
     app.getTeamHelper().fillTeamCreationForm(
             new TeamData()
+
             .withTeamName("h"));
+
     app.getTeamHelper().clickContinueButton();
  //   String createdTeamName = app.getTeamHelper().getTeamNameFromTeamPage();
     app.getTeamHelper().returnToHomePage();
@@ -142,9 +142,12 @@ public class TeamCreationTests extends TestBase {
     Assert.assertTrue(app.getSessionHelper().isUserLoggedIn());
   }
 
+
+  @AfterClass(enabled = false)
+
   @Test
+
   public void postActions() throws InterruptedException {
     app.getTeamHelper().cleanTeams();
   }
-
 }

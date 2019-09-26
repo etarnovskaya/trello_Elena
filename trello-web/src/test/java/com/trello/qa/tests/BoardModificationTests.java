@@ -23,6 +23,4 @@ public class BoardModificationTests extends  TestBase {
     Assert.assertTrue(app.getBoardHelper().findBoardByName(bName));
 
   }
-
-
 }

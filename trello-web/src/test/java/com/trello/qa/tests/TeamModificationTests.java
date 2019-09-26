@@ -5,12 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TeamModificationTests extends  TestBase {
+
 @BeforeMethod
 public void precoditions() throws InterruptedException {
   if(!app.getTeamHelper().isTeamsPresent()){
     app.getTeamHelper().createTeam();
   }
 }
+
 
   @Test
   public void testRenameTeam() throws InterruptedException {
@@ -21,7 +23,7 @@ public void precoditions() throws InterruptedException {
     app.getTeamHelper().changeTeamProfile("hh","hha");
     app.getTeamHelper().confirmEditTeam();
 
-   // Thread.sleep(5000);
+    // Thread.sleep(5000);
     Assert.assertEquals(
             app.getTeamHelper().getTeamNameFromTeamPage(), "hh");
 

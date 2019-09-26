@@ -24,6 +24,4 @@ public class BoardDeletionTest extends TestBase {
 
     int after = app.getBoardHelper().getPersnalBoardsCount();
   }
-
-
 }

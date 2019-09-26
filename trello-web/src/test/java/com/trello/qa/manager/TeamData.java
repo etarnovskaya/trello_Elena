@@ -1,7 +1,6 @@
-package com.trello.qa.model;
+package com.trello.qa.manager;
 
 public class TeamData {
-
   private  String teamName;
   private  String description;
 
@@ -23,10 +22,4 @@ public class TeamData {
     return description;
   }
 
-  @Override
-  public String toString() {
-    return "TeamData{" +
-            "teamName='" + teamName + '\'' + '}';
-  }
 }
-

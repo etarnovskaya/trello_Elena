@@ -23,7 +23,7 @@ public class ApplicationManager {
   }
 
   public void init() {
-      if(browser.equals(BrowserType.CHROME)){
+    if(browser.equals(BrowserType.CHROME)){
       driver = new ChromeDriver();
     }if (browser.equals(BrowserType.FIREFOX)){
       driver = new FirefoxDriver();
@@ -39,7 +39,7 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(driver);
 
     sessionHelper.openSite("https://trello.com");
-    sessionHelper.login("elena.telran@yahoo.com", "12345.com");
+    sessionHelper.login("shcherbakov-d@mail.ru", "wdw77wdw");
   }
 
   public void stop() {

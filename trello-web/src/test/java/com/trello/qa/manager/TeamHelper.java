@@ -79,7 +79,9 @@ Thread.sleep(5000);
       clickOnFirstTeam();
       openSettings();
       deleteTeam();
+
       returnToHomePage();
+
       refreshPage();
       count = getTeamsCount();
       System.out.println("Now Teams count is: " +count);
@@ -100,7 +102,9 @@ Thread.sleep(5000);
     click(By.cssSelector(".js-submit-profile"));
   }
 
+
   public boolean isTeamsPresent() throws InterruptedException {
+
     return getTeamsCount()>0;
   }
 
@@ -113,6 +117,5 @@ Thread.sleep(5000);
     clickContinueButton();
     returnToHomePage();
   }
-
-
 }
+

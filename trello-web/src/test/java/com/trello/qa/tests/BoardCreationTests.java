@@ -1,9 +1,10 @@
-package com.trello.qa.tests;
+﻿package com.trello.qa.tests;
 
 import com.trello.qa.model.BoardData;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,6 +29,7 @@ public class BoardCreationTests extends TestBase {
     app.getBoardHelper().selectCreateBoardFromDropDown();
 
     app.getBoardHelper().fillBoardCreationForm(board);
+
     app.getBoardHelper().confirmBoardCreation();
     app.getBoardHelper().returnToHomePage();
 
@@ -36,8 +38,9 @@ public class BoardCreationTests extends TestBase {
     Assert.assertEquals(afterCreation, beforeCreation + 1);
   }
 
+
   @Test
-  public void testBoardCreation() throws InterruptedException {
+  public void testBoardCreationDataProvader() throws InterruptedException {
     int beforeCreation = app.getBoardHelper().getPersnalBoardsCount();
     app.getBoardHelper().clickOnPlusButtonOnHeader();
     app.getBoardHelper().selectCreateBoardFromDropDown();
