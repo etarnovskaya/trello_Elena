@@ -14,9 +14,9 @@ public class BoardCreationTests extends TestBase {
   @DataProvider
   public Iterator<Object[]> validBoards(){
     List<Object[]> list = new ArrayList<>();
-    list.add(new Object[] {"name 1"});
+    list.add(new Object[] {"name_1"});
     list.add(new Object[] {"1"});
-    list.add(new Object[] {"прпрпр"});
+    list.add(new Object[] {"wert"});
 
     return  list.iterator();
   }
@@ -27,9 +27,7 @@ public class BoardCreationTests extends TestBase {
     int beforeCreation = app.getBoardHelper().getPersnalBoardsCount();
     app.getBoardHelper().clickOnPlusButtonOnHeader();
     app.getBoardHelper().selectCreateBoardFromDropDown();
-
     app.getBoardHelper().fillBoardCreationForm(board);
-
     app.getBoardHelper().confirmBoardCreation();
     app.getBoardHelper().returnToHomePage();
 
@@ -52,6 +50,4 @@ public class BoardCreationTests extends TestBase {
 
     Assert.assertEquals(afterCreation, beforeCreation + 1);
   }
-
-
 }
