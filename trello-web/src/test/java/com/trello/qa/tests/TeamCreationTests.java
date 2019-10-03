@@ -71,11 +71,10 @@ public class TeamCreationTests extends TestBase {
 //    //  Assert.assertEquals(createdTeamName.toLowerCase(), teamName.toLowerCase());
 //  }
 
-  @Test(dataProvider = "validTeams")
+  @Test(dataProvider = "validTeamsfromcsv")
   public void testTeamCreationFromPlusButtonOnHeaderWithDataProvider
-          (String teamName, String description) throws InterruptedException {
-    TeamData team =
-            new TeamData().withTeamName(teamName).withDescription(description);
+          (TeamData team) throws InterruptedException {
+
     int before = app.getTeamHelper().getTeamsCount();
     app.getTeamHelper().clickOnPlusButtonOnHeader();
     app.getTeamHelper().selectCreateTeamFromDropDown();

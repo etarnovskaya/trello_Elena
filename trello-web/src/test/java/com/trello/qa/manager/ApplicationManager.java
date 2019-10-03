@@ -39,7 +39,7 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(driver);
 
     sessionHelper.openSite("https://trello.com");
-    sessionHelper.login("elena.telran@yahoo.com", "12345.com");
+    sessionHelper.login("zinovi@my.com", "12345.com");
   }
 
   public void stop() {
