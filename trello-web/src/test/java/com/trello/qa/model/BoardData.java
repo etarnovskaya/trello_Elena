@@ -14,8 +14,16 @@ public class BoardData {
     return  this;
   }
 
+
   public String getBoardName() {
     return boardName;
+  }
+
+  @Override
+  public String toString() {
+    return "BoardData{" +
+            "boardName='" + boardName + '\'' +
+            '}';
   }
 
   public String getS() {
