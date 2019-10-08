@@ -1,5 +1,0 @@
-21:01:01.969 [main] INFO  com.trello.qa.tests.TestBase - start test testBoardCreation with parameters []
-21:01:25.791 [main] INFO  com.trello.qa.tests.TestBase - stop test testBoardCreation
-21:01:25.800 [main] INFO  com.trello.qa.tests.TestBase - start test testBoardCreationDP with parameters []
-21:01:49.552 [main] INFO  com.trello.qa.tests.TestBase - stop test testBoardCreationDP
-21:01:49.576 [main] INFO  com.trello.qa.tests.TestBase - start test testBoardCreationDP with parameters []
