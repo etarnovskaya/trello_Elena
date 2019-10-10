@@ -54,6 +54,7 @@ public class BoardHelper extends  HelperBase{
 
   public void clickOnFirstPrivateBoard() {
     click(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
+    takescreenshot();
   }
 
   public void initBoardDeletion() {

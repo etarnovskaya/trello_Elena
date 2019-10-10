@@ -1,0 +1,15 @@
+21:10:49.745 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [href='/login'] found
+21:10:49.983 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [href='/login'] found
+21:10:51.508 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+21:10:51.638 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+21:10:51.714 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+21:10:51.914 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+21:10:52.010 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+21:10:52.076 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+21:10:52.164 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.id: login found
+21:10:52.290 [Test worker] INFO  com.trello.qa.tests.TestBase - start test changeAvatarTest with parameters []
+21:11:01.059 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [data-test-id='header-member-menu-button'] found
+21:11:01.222 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [data-test-id='header-member-menu-profile'] found
+21:11:02.562 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .rsiNque2CCqtPE found
+21:11:03.073 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.name: file found
+21:11:13.112 [Test worker] INFO  com.trello.qa.tests.TestBase - stop test changeAvatarTest

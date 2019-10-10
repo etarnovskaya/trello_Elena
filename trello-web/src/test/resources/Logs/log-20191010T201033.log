@@ -1,0 +1,24 @@
+20:10:43.348 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [href='/login'] found
+20:10:43.537 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [href='/login'] found
+20:10:45.195 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+20:10:45.321 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+20:10:45.366 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=email] found
+20:10:45.530 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+20:10:45.607 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+20:10:45.650 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: [type=password] found
+20:10:45.728 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.id: login found
+20:10:45.836 [Test worker] INFO  com.trello.qa.tests.TestBase - start test deletionBoardTest with parameters []
+20:10:54.104 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.xpath: //*[@class='icon-lg icon-member']/../../.. found
+20:11:04.176 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+20:11:04.205 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+20:11:05.798 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .board-header-btn.mod-show-menu found
+20:11:06.025 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .js-open-more found
+20:11:06.310 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .board-menu-navigation-item-link.js-close-board found
+20:11:06.464 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .js-confirm.full.negate found
+20:11:06.678 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .js-delete found
+20:11:06.750 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .js-delete found
+20:11:06.848 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: .js-confirm.full found
+20:11:37.040 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.cssSelector: ._3gUubwRZDWaOF0._2WhIqhRFBTG7Ry._2NubQcQM83YCVV found
+20:11:37.060 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.name: house found
+20:11:52.360 [Test worker] INFO  c.t.q.m.ApplicationManager$MyListener - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+20:11:52.367 [Test worker] INFO  com.trello.qa.tests.TestBase - stop test deletionBoardTest

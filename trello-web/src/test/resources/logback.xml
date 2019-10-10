@@ -1,11 +1,5 @@
 <configuration>
-    <configuration>
-        <appender name="NATS" class="com.gerritforge.logback.nats.NatsTopicAppender">
-            <url>nats://localhost:4222</url>
-            <topic>jenkins</topic>
-        </appender>
-
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are assigned the type
              ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
         <encoder>
@@ -29,6 +23,6 @@
     <root level="debug">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
-        <appender-ref ref="NATS" />
+
     </root>
 </configuration>
