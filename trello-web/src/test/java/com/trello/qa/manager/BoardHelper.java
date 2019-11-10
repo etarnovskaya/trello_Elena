@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
+
 public class BoardHelper extends  HelperBase{
   public BoardHelper(WebDriver driver) {
     super(driver);
@@ -54,6 +58,12 @@ public class BoardHelper extends  HelperBase{
 
   public void clickOnFirstPrivateBoard() {
     click(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
+    takescreenshot();
+  }
+
+  public void clickOnBoardByIndex(int i) {
+    driver.findElements(By.xpath("//*[@class='icon-lg icon-member']/../../..//li")).get(i).click();
+   // click(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
     takescreenshot();
   }
 
@@ -106,6 +116,19 @@ public class BoardHelper extends  HelperBase{
 
     return driver.findElement(By.xpath("//*[@class='icon-lg icon-member']/../../..//li")).getText().equals(name);
 
+  }
+
+
+  public List<BoardData> getBoardList() {
+    List<BoardData> list = new ArrayList<>();
+    List<WebElement> boards = driver.findElements(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
+    for(WebElement board : boards){
+      String text = board.getText();
+      BoardData bd = new BoardData().setBoardName(text);
+      list.add(bd);
+     // System.out.println(bd);
+    }
+    return  list;
   }
 
 

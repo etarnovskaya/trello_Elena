@@ -1,0 +1,25 @@
+18:10:06.388 INFO   - By.cssSelector: [href='/login'] found
+18:10:06.634 INFO   - By.cssSelector: [href='/login'] found
+18:10:09.999 INFO   - By.cssSelector: [type=email] found
+18:10:10.235 INFO   - By.cssSelector: [type=email] found
+18:10:10.327 INFO   - By.cssSelector: [type=email] found
+18:10:10.561 INFO   - By.cssSelector: [type=password] found
+18:10:10.673 INFO   - By.cssSelector: [type=password] found
+18:10:10.738 INFO   - By.cssSelector: [type=password] found
+18:10:10.852 INFO   - By.id: login found
+18:10:11.007 INFO   - start test deletionBoardTest with parameters []
+18:10:19.385 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../.. found
+18:10:29.454 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+18:10:29.495 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+18:10:34.388 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+18:10:35.778 INFO   - By.cssSelector: .board-header-btn.mod-show-menu found
+18:10:35.822 INFO   - By.cssSelector: .js-open-more found
+18:10:35.967 INFO   - By.cssSelector: .board-menu-navigation-item-link.js-close-board found
+18:10:36.150 INFO   - By.cssSelector: .js-confirm.full.negate found
+18:10:36.366 INFO   - By.cssSelector: .js-delete found
+18:10:36.433 INFO   - By.cssSelector: .js-delete found
+18:10:36.568 INFO   - By.cssSelector: .js-confirm.full found
+18:11:06.734 INFO   - By.cssSelector: ._3gUubwRZDWaOF0._2WhIqhRFBTG7Ry._2NubQcQM83YCVV found
+18:11:06.762 INFO   - By.name: house found
+18:11:17.015 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+18:11:17.030 INFO   - stop test deletionBoardTest

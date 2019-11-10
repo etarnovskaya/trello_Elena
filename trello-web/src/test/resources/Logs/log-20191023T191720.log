@@ -1,0 +1,19 @@
+19:17:30.871 INFO   - By.cssSelector: [href='/login'] found
+19:17:31.002 INFO   - By.cssSelector: [href='/login'] found
+19:17:33.440 INFO   - By.cssSelector: [type=email] found
+19:17:33.663 INFO   - By.cssSelector: [type=email] found
+19:17:33.714 INFO   - By.cssSelector: [type=email] found
+19:17:33.901 INFO   - By.cssSelector: [type=password] found
+19:17:33.995 INFO   - By.cssSelector: [type=password] found
+19:17:34.047 INFO   - By.cssSelector: [type=password] found
+19:17:34.129 INFO   - By.id: login found
+19:17:34.243 INFO   - start test changeBoardName with parameters []
+19:17:42.333 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../.. found
+19:17:42.383 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+19:17:46.194 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+19:17:47.454 INFO   - By.cssSelector: .js-rename-board found
+19:17:47.669 INFO   - By.cssSelector: input.js-board-name-input found
+19:18:17.759 INFO   - By.cssSelector: ._3gUubwRZDWaOF0._2WhIqhRFBTG7Ry._2NubQcQM83YCVV found
+19:18:17.794 INFO   - By.name: house found
+19:18:19.541 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+19:18:23.057 INFO   - stop test changeBoardName

@@ -1,0 +1,9 @@
+19:08:56.990 INFO   - By.cssSelector: [href='/login'] found
+19:08:57.188 INFO   - By.cssSelector: [href='/login'] found
+19:08:59.496 INFO   - By.cssSelector: [type=email] found
+19:08:59.738 INFO   - By.cssSelector: [type=email] found
+19:08:59.785 INFO   - By.cssSelector: [type=email] found
+19:09:00.000 INFO   - By.cssSelector: [type=password] found
+19:09:00.125 INFO   - By.cssSelector: [type=password] found
+19:09:00.185 INFO   - By.cssSelector: [type=password] found
+19:09:00.309 INFO   - By.id: login found

@@ -27,8 +27,7 @@ public class ApplicationManager {
   private String browser;
 
   public static class MyListener extends AbstractWebDriverEventListener {
-    private WebDriver wd;
-    HelperBase hb = new HelperBase(wd);
+
     Logger logger =  LoggerFactory.getLogger(MyListener.class);
 
     @Override

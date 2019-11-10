@@ -1,0 +1,13 @@
+11:39:19.363 INFO   - By.cssSelector: [href='/login'] found
+11:39:19.555 INFO   - By.cssSelector: [href='/login'] found
+11:39:21.729 INFO   - By.cssSelector: [type=email] found
+11:39:22.041 INFO   - By.cssSelector: [type=email] found
+11:39:22.110 INFO   - By.cssSelector: [type=email] found
+11:39:22.387 INFO   - By.cssSelector: [type=password] found
+11:39:22.549 INFO   - By.cssSelector: [type=password] found
+11:39:22.610 INFO   - By.cssSelector: [type=password] found
+11:39:22.738 INFO   - By.id: login found
+11:39:22.887 INFO   - start test boardSet with parameters []
+11:39:30.110 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../.. found
+11:39:30.181 INFO   - By.xpath: //*[@class='icon-lg icon-member']/../../..//li found
+11:39:30.247 INFO   - stop test boardSet
