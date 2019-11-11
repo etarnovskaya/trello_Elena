@@ -8,30 +8,9 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class OpenAppTest {
-AppiumDriver driver;
-  @BeforeMethod
-  public void setUp() throws MalformedURLException {
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability("platformName", "Android");
-    capabilities.setCapability("deviceName", "qa21");
-    capabilities.setCapability( "platformVersion", "8.0");
-    capabilities.setCapability("automationName", "Appium");
-    capabilities.setCapability( "appPackage", "com.trello");
-    capabilities.setCapability("appActivity",".home.HomeActivity");
-    capabilities.setCapability("app",
-            "C:/Users/Elena/Dropbox/Tel-ran/Mobile/apk/Trello_new.apk");
-
-driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-  }
-
+public class OpenAppTest extends TestBase{
   @Test
   public void openAppTest(){
     System.out.println("App opened");
-  }
-
-  @AfterMethod
-  public void teardown(){
-
   }
 }

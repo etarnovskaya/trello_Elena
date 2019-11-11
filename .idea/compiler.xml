@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Lena.trello-web.main" target="1.8" />
       <module name="Lena.trello-web.test" target="1.8" />
+      <module name="qa21.trello-mob.main" target="1.8" />
+      <module name="qa21.trello-mob.test" target="1.8" />
       <module name="trello-mob.main" target="1.8" />
       <module name="trello-mob.test" target="1.8" />
       <module name="trello-web.main" target="1.8" />
