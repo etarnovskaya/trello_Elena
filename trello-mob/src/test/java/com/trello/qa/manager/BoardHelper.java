@@ -1,6 +1,7 @@
 package com.trello.qa.manager;
 
 import com.trello.qa.model.BoardData;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BoardHelper extends  HelperBase{
-  public BoardHelper(WebDriver driver) {
+  public BoardHelper(AppiumDriver driver) {
     super(driver);
   }
 
@@ -60,11 +61,11 @@ public class BoardHelper extends  HelperBase{
     takescreenshot();
   }
 
-  public void clickOnBoardByIndex(int i) {
-    driver.findElements(By.xpath("//*[@class='icon-lg icon-member']/../../..//li")).get(i).click();
-   // click(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
-    takescreenshot();
-  }
+// public void clickOnBoardByIndex(int i) {
+//   driver.findElements(By.xpath("//*[@class='icon-lg icon-member']/../../..//li")).get(i).get(i).click();
+//   // click(By.xpath("//*[@class='icon-lg icon-member']/../../..//li"));
+//    takescreenshot();
+//  }
 
   public void initBoardDeletion() {
     clickCloseBoardButton();
@@ -130,5 +131,8 @@ public class BoardHelper extends  HelperBase{
     return  list;
   }
 
-
+//________________________________________________________
+  public void clickOnPlusButton() {
+click(By.id("add_fab"));
+  }
 }

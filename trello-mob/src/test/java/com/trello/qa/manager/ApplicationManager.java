@@ -1,11 +1,14 @@
 package com.trello.qa.manager;
 
 import com.google.common.io.Files;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
@@ -13,70 +16,44 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-  EventFiringWebDriver driver;
+  AppiumDriver driver;
   TeamHelper teamHelper;
   BoardHelper boardHelper;
   SessionHelper sessionHelper;
   UserHelper userHelper;
-  private String browser;
 
-  public static class MyListener extends AbstractWebDriverEventListener {
+  public void init() throws MalformedURLException, InterruptedException {
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setCapability("platformName", "Android");
+    capabilities.setCapability("deviceName", "qa21");
+    capabilities.setCapability( "platformVersion", "8.0");
+    capabilities.setCapability("automationName", "Appium");
+    capabilities.setCapability( "appPackage", "com.trello");
+    capabilities.setCapability("appActivity",".home.HomeActivity");
+    capabilities.setCapability("app",
+            "C:/Users/Elena/Dropbox/Tel-ran/Mobile/apk/Trello_new.apk");
 
-    Logger logger =  LoggerFactory.getLogger(MyListener.class);
+    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
-    @Override
-    public void afterFindBy(By by, WebElement element, WebDriver driver) {
-      logger.info(by + " found");
-    }
 
-    @Override
-    public void onException(Throwable throwable, WebDriver driver) {
-      File tmp =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-      File screen = new File("src/test/resources/Screenshots/screen"
-              +System.currentTimeMillis()+".png");
-
-      try {
-        Files.copy(tmp, screen);
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-      logger.error("!!!!!!!!!!ERROR!!!!!!!!!!!!", throwable);
-      logger.error("screenshot " + screen);
-     // hb.takescreenshot();
-
-    }
-  }
-
-  public ApplicationManager(String browser) {
-    this.browser = browser;
-  }
-
-  public void init() {
-      if(browser.equals(BrowserType.CHROME)){
-      driver = new EventFiringWebDriver(new ChromeDriver());
-    }if (browser.equals(BrowserType.FIREFOX)){
-      driver = new EventFiringWebDriver(new FirefoxDriver());
-    }if (browser.equals(BrowserType.EDGE)){
-      driver = new EventFiringWebDriver(new EdgeDriver());
-    }
-      driver.register(new MyListener());
-
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.manage().window().maximize();
     teamHelper = new TeamHelper(driver);
     boardHelper = new BoardHelper(driver);
     sessionHelper = new SessionHelper(driver);
     userHelper = new UserHelper(driver);
 
-    sessionHelper.openSite("https://trello.com");
+
     sessionHelper.login("elena.telran@yahoo.com", "12345.com");
+
   }
 
-  public void stop() {
-    driver.quit();
+  public void stop() throws InterruptedException {
+    Thread.sleep(10000);
+  driver.quit();
   }
 
   public TeamHelper getTeamHelper() {

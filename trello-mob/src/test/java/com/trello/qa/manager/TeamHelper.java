@@ -1,12 +1,13 @@
 package com.trello.qa.manager;
 
 import com.trello.qa.model.TeamData;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TeamHelper extends  HelperBase {
 
-  public TeamHelper(WebDriver driver) {
+  public TeamHelper(AppiumDriver driver) {
     super(driver);
   }
 

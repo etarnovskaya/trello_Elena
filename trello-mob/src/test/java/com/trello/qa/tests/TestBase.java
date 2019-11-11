@@ -1,7 +1,6 @@
 package com.trello.qa.tests;
 
 import com.trello.qa.manager.ApplicationManager;
-import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
@@ -10,8 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.util.Arrays;
-
 
 public class TestBase {
 
@@ -27,15 +26,15 @@ public class TestBase {
     System.out.println("------------------------------------------------------------------------");
   }
   protected static ApplicationManager app =
-          new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
+          new ApplicationManager();
 
   @BeforeSuite
-  public void setUp() {
+  public void setUp() throws MalformedURLException, InterruptedException {
     app.init();
   }
 
   @AfterSuite
-  public void tearDown() {
+  public void tearDown() throws InterruptedException {
     app.stop();
   }
 
